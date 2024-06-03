@@ -8,7 +8,11 @@ sector embedding_test
 end
 sector list_src
   section sect1
-    list str somelist 'aasd', 'bebis', '$(/embedding_test/sect1/someu16)'
+    list str somelist 'aasd', 'bebis', '$(/embedding_test/sect1/someu16)',
+    'a', 'b', 'cdefgh',
+    'hijk',
+                      'lmnop', 'qrstuvw',
+                      'xyz', 'list_end'
   end
 end
 sector test

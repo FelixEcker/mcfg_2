@@ -413,6 +413,9 @@ mcfg_data_parse_result_t _parse_str_list_data(mcfg_list_t *list, char *str) {
   ret.data = list;
   ret.size = sizeof(*list);
 
+  remove_newline(str);
+  ret.multiline = str[strlen(str) - 1] == ',';
+
   return ret;
 }
 
